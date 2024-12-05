@@ -16,10 +16,9 @@
 > 4. Navigation from the About page to the Main page. - Filename: about.html Lines / Change: Added a link to return to the main page (lines 11-12).
 
 ### E. Add a sample inventory appropriate for your chosen store to the application.
-> 1. contains five parts  - Filename: Line: Change:
-> 2. contains five products - Filename: Line: Change:
-> 3. should not overwrite existing data in the database.
-> 4. Ensure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
+> 1. contains five parts  - Filename: BootstrapData.java, Lines/Changes: added 5 parts, two outsourced parts (lines 47-66) and three in-house parts(68-93)
+> 2. contains five products - Filename: BootstrapData.java Lines/Changes: added 5 products (lines 102-106).
+> 3. should not overwrite existing data in the database. Ensure the sample inventory is added only when both the part and product lists are empty and data is not duplicated. - Filename: BoostrapData.java Lines/Changes: Logic check to assert there is no existing data before adding sample data (line 45), prevents unwanted duplication.
 
 ### F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 > 1. The “Buy Now” button must be next to the buttons that update and delete products.
