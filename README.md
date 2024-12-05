@@ -10,9 +10,10 @@
 ### D. Add an "About" page to the application
 
 > Has the following elements:
-> 1. A Description of the Company on the About page.  - Filename: Line: Change:
-> 2. Navigation from the Main page to the About page.  - Filename: Line: Change:
-> 3. Navigation from the About page to the Main page. - Filename: Line: Change:
+> 1. A Description of the Company an About page.  - Filename: about.html, Lines / Change: Created an about page with a title (line:5), a welcome header (line 8), and a brief company description (lines 8-9).
+> 2. Controller to display the About page.  - Filename: AboutController.java, Lines / Changes:  Controller for the about page, gets mapping to /about (line 8) and returns a string reference to about.html (line 10).
+> 3. Navigation from the Main page to the About page. - Filename: mainscreen.html, Lines/Changes: Added about button that references the /about mapping (line 20).
+> 4. Navigation from the About page to the Main page. - Filename: about.html Lines / Change: Added a link to return to the main page (lines 11-12).
 
 ### E. Add a sample inventory appropriate for your chosen store to the application.
 > 1. contains five parts  - Filename: Line: Change:
