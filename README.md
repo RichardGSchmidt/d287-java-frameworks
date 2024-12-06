@@ -27,7 +27,7 @@
 > 3. should not overwrite existing data in the database. Ensure the sample inventory is added only when both the part and product lists are empty and data is not duplicated. - Filename: BoostrapData.java Lines/Changes: Logic check to assert there is no existing data before adding sample data (line 45), prevents unwanted duplication.
 
 ### F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
-> 1. The “Buy Now” button must be next to the buttons that update and delete products. - Filename mainscreen.html, Lines/Changes: added a buy button next to the other two buttons (line 90).
+> 1. The “Buy Now” button must be next to the buttons that update and delete products. - Filename mainscreen.html, Lines/Changes: added a buy now button next to the other two buttons (line 90).
 > 2. The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts. - Filename: AddProductController.java, Lines/Changes: Added a buy product function to the controller (lines 177-193) that decrements the inventory by one if there is available inventory (lines 184-188)
 > 3. Display a message that indicates the success or failure of a purchase. - Filename: AddProductController.java, Lines/Changes: if inventory is available a success page is shown (line 188), otherwise a failure page is shown (line 191).
      > Filename: buysuccess.html Lines/Changes: Created an item successfully purchased notification page with a message informing the user of success (lines 8-9) and a link back to the main page (lines 10-11).
