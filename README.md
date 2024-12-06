@@ -58,3 +58,4 @@
 
 
 ## J.  Remove the class files for any unused validators in order to clean your code.
+> 1. Deleted DeletePartValidator.java as it was unused in accordance with Task J.  This is the only unused validator and completes Task J.
