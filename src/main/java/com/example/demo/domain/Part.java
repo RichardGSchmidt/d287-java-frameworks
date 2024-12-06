@@ -1,6 +1,7 @@
 package com.example.demo.domain;
 
 import com.example.demo.validators.ValidDeletePart;
+import com.example.demo.validators.ValidInventory;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -16,6 +17,7 @@ import java.util.Set;
  */
 @Entity
 @ValidDeletePart
+@ValidInventory
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
 @Table(name="Parts")
@@ -79,7 +81,8 @@ public abstract class Part implements Serializable {
     public void setMaxInv(int maxInv) { this.maxInv = maxInv; }
 
     //inventory validation function checks to ensure that inventory is between min and max values.
-    public boolean isInventoryValid(){ return ((minInv <= inv) && (inv <= maxInv)); }
+    public boolean invGreaterMax(){ return ( (inv > maxInv)); }
+    public boolean invLessMin(){ return ( (inv < minInv)); }
     //further check to ensure that min value is less than or equal to max value
     public boolean isMaxInvValid(){ return (maxInv >= minInv); }
 

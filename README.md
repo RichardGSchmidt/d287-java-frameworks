@@ -8,6 +8,7 @@
 > 1. Shop name updated, Filename: templates/mainscreen.html Lines/Changes: 14: Richard's 3D Printer Shop, 19: Richard's 3D Printer Shop
 > 2. Labels for clarity: Filename: InhousePartForm.html Lines/Changes: labeled fields (lines 15, 18, 21, 34)
 > 3. Labels for clarity: Filename: OutsourcedPartForm.html Lines/Changes: labeled fields (lines 16, 18, 21, 24, 27, 34)
+> 4. While completing Task G. Added min and max labels to Filename: mainscreen.html Lines/Changes: Min Max column labels (lines 39-40) and part min and max values (lines 49-50).
 
 
 ### D. Add an "About" page to the application
@@ -36,7 +37,9 @@
 > 2. Modify the sample inventory to include the maximum and minimum fields. - Filename: BootStrapData.java, Lines/Changes: For each sample part, added calls to set functions for minInv (lines: 54, 64, 73, 82, 91) and maxInv (lines: 55, 65, 74, 83, 92)
 > 3. Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values. Filename: InhousePartForm.html, Lines/Changes: Added a minimum inventory input box (lines: 25-27), added a maximum inventory input box (lines: 29-31). Filename: OutsourcedPartForm.html, Lines/Changes: Added a minimum inventory input box (lines: 24-26), added a maximum inventory input box (lines: 27-29).
 > 4. Rename the file the persistent storage is saved to. - Renamed database in application.properties (line 6).
-> 5. Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+> 5. Modify the code to enforce that the inventory is between or at the minimum and maximum value. - Filename: Part.java, Lines/Changes: The @ValidInventory constraint (line 20) enforces these requirements. Helper functions invGreaterMax() (line 110), invLessMin() (line 111), isMaxIntValid() (line 113) added for use in validators.
+     > Filename: ValidInventory.java, Lines/Changes: Created an interface (lines 16-23) to validate the inventory using the InventoryValidator class as a validator for the constraint (line 16).
+     > Filename: InventoryValidator.java, Lines/Changes: Created logic to check if a part is valid and to return true if valid and false if invalid (lines: 8-41).  Adds additional Constraint violations for each condition causing one, including if minInv > maxInv (lines: 17-23), if inv < minInv (lines 24-30), and if inv > maxInv (line: 38).
 
 ### H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 > 1. Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
