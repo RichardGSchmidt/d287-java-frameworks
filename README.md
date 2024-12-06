@@ -52,7 +52,9 @@
 
 ### I.  Add at least two unit tests
 > 1. for the maximum fields to the PartTest class in the test package.
+     > Filename: PartTest.java, Lines/Changes: create unit test testMinValue() which tests the minimum value (lines: 161-165)
 > 2. for the minimum fields to the PartTest class in the test package.
+     > Filename: PartTest.java, Lines/Changes: created unit test testMaxValue() which tests the maximum value (lines: 168-172)
 
 
 ## J.  Remove the class files for any unused validators in order to clean your code.
