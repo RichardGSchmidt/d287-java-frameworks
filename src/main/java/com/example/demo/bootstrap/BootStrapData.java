@@ -44,15 +44,15 @@ public class BootStrapData implements CommandLineRunner {
         //as per the instructions in task E.
         if ((partRepository.count()==0)&&(productRepository.count()==0)) {
 
-            //Adding Parts temporarily commented out parts of code are staged in prep for part G.
+
             OutsourcedPart coated350Bed = new OutsourcedPart();
             coated350Bed.setCompanyName("IdeaFormer");
             coated350Bed.setName("Coated 350mm bed");
             coated350Bed.setInv(15);
             coated350Bed.setPrice(34.50);
             coated350Bed.setId(350L);
-            //coated350Bed.setMinInv(1);
-            //coated350Bed.setMaxInv(20);
+            coated350Bed.setMinInv(1);
+            coated350Bed.setMaxInv(20);
             outsourcedPartRepository.save(coated350Bed);
 
             OutsourcedPart hemeraExtruder = new OutsourcedPart();
@@ -61,8 +61,8 @@ public class BootStrapData implements CommandLineRunner {
             hemeraExtruder.setInv(5);
             hemeraExtruder.setPrice(215.95);
             hemeraExtruder.setId(71L);
-            //hemeraExtruder.setMinInv(1);
-            //hemeraExtruder.setMaxInv(20);
+            hemeraExtruder.setMinInv(0);
+            hemeraExtruder.setMaxInv(100);
             outsourcedPartRepository.save(hemeraExtruder);
 
             InhousePart voronSB = new InhousePart();
@@ -70,8 +70,8 @@ public class BootStrapData implements CommandLineRunner {
             voronSB.setInv(15);
             voronSB.setPrice(115.95);
             voronSB.setId(70L);
-            //voronSB.setMinInv(1);
-            //voronSB.setMaxInv(20);
+            voronSB.setMinInv(5);
+            voronSB.setMaxInv(50);
             partRepository.save(voronSB);
 
             InhousePart voronTap = new InhousePart();
@@ -79,8 +79,8 @@ public class BootStrapData implements CommandLineRunner {
             voronTap.setInv(18);
             voronTap.setPrice(45.95);
             voronTap.setId(11L);
-            //voronTap.setMinInv(1);
-            //voronTap.setMaxInv(20);
+            voronTap.setMinInv(3);
+            voronTap.setMaxInv(45);
             partRepository.save(voronTap);
 
             InhousePart plate350 = new InhousePart();
@@ -88,8 +88,8 @@ public class BootStrapData implements CommandLineRunner {
             plate350.setInv(20);
             plate350.setPrice(15.95);
             plate350.setId(351L);
-            //plate350.setMinInv(1);
-            //plate350.setMaxInv(20);
+            plate350.setMinInv(1);
+            plate350.setMaxInv(80);
             partRepository.save(plate350);
 
             //Console outputs that were in existing code
