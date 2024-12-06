@@ -173,4 +173,23 @@ public class AddProductController {
         theModel.addAttribute("availparts",availParts);
         return "productForm";
     }
+
+    @GetMapping("/buyproduct")
+    public String buyProduct(@RequestParam("productID") int theId, Model theModel) {
+        ProductService productService = context.getBean(ProductServiceImpl.class);
+        Product product=productService.findById(theId);
+
+        //checks to see if there is inventory available
+        int stock = product.getInv();
+        if(stock > 0){
+            //removes inventory if available
+            product.setInv(stock - 1);
+            productService.save(product);
+            return "buysuccess";
+        }
+        //else it returns failure (implicit else due to return in if statement)
+        return "buyfailure";
+
+    }
+
 }
