@@ -5,10 +5,12 @@
 ### C. Customize the HTML user interface for your customer's application
 
 > Includes the following changes to UI elements:
-> 1. Shop name updated, Filename: templates/mainscreen.html Lines/Changes: 14: Richard's 3D Printer Shop, 19: Richard's 3D Printer Shop
-> 2. Labels for clarity: Filename: InhousePartForm.html Lines/Changes: labeled fields (lines 15, 18, 21, 34)
-> 3. Labels for clarity: Filename: OutsourcedPartForm.html Lines/Changes: labeled fields (lines 16, 18, 21, 24, 27, 34)
-> 4. While completing Task G. Added min and max labels to Filename: mainscreen.html Lines/Changes: Min Max column labels (lines 39-40) and part min and max values (lines 49-50).
+> 1. Shop name updated, Filename: templates/mainscreen.html Lines/Changes: renamed title to Richard's 3D Printer Shop (line 14), Renamed heading to Richard's 3D Printer Shop (line 19)
+> 2. Product names, Filename: templates/mainscreen.html Lines/Changes: Changed header from Products to 3d Printers (line 58) 
+> 3. Names of the parts. Filename: templates/mainscreen.html Lines/Changes: Changed header from Products to 3d Printer Parts (line 22)
+> 4. Labels for clarity: Filename: InhousePartForm.html Lines/Changes: labeled fields (lines 15, 18, 21, 34)
+> 5. Labels for clarity: Filename: OutsourcedPartForm.html Lines/Changes: labeled fields (lines 16, 18, 21, 24, 27, 34)
+> 6. While completing Task G. Added min and max labels to Filename: mainscreen.html Lines/Changes: Min Max column labels (lines 39-40) and part min and max values (lines 49-50).
 
 
 ### D. Add an "About" page to the application
